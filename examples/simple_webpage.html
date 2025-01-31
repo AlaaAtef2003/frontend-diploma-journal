@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Page</title>
+    <style>
+        h1 {
+            font-family: Arial;
+            font-size: 30px;
+            font-weight: bold;
+            color: #333;
+            font-style: italic;
+            margin-inline-start: 250px;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        p {
+            width: 400px;
+            line-height: normal;
+            color: #666;
+            margin-left: 100px;
+        }
+
+        .click {
+            color: #ffffff;
+            background-color: rgb(0, 123, 255);
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 250px;
+            border-radius: 200px;
+            box-shadow: 5px 5px 5px #a0b3c7;
+        }
+
+        .click:hover {
+            opacity: 0.7;
+        }
+
+        .click:active {
+            opacity: 0.4;
+        }
+
+        .link {
+            margin-left: 50px;
+        }
+
+        .web-example {
+            color: rgb(7, 5, 3);
+            cursor: pointer;
+        }
+
+        .web-example:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Simple Web Page</h1>
+        <p>This is a basic example of an <u>HTML</u> and <u>CSS</u> <span class="web-example">webpage</span>.</p>
+        <a href="https://www.youtube.com/" class="link">Go to YouTube</a>
+        <button onclick="alert('Hello world!')" class="click">Click here</button>
+    </div>
+</body>
+</html>
