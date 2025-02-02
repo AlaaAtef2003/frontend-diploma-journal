@@ -1,0 +1,85 @@
+h1 {
+    
+    font-family: "Viga", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #504f4f;
+    font-style: italic;
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+.container {
+    margin-top: 50px;  
+}
+.p1 {
+    width: 400px;
+    line-height: normal;
+    color: #251e1e;
+    margin-top: 10px;
+    margin-left: 80px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-align: center;
+}
+.click {
+    color: #ffffff;
+    background-color: rgb(80, 109, 139);
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 100px;
+    border-radius: 200px;
+    box-shadow: 5px 5px 5px #606d7a;
+}
+.click:hover {
+    opacity: 0.7;
+}
+.click:active {
+    opacity: 0.4;
+}
+.link {
+    margin-top: 10px;         
+    margin-left: 100px;
+}
+
+.web-example {
+    color: rgb(7, 5, 3);
+    cursor: pointer;
+}
+
+.web-example:hover {
+    text-decoration: underline;
+}
+.h2{
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-bottom: 9px;
+}
+.p2{
+    margin-top: 9px;
+    margin-left: 100px;
+    color: #504f4f;
+}
+.p3{
+    margin-top: 9px;
+    margin-left: 100px;
+    color: black;
+    
+}
+.GetStarted{
+    background-color: rgb(50, 146, 25);
+    padding: 10px 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-left: 100px ;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(151, 151, 151);    
+    }
+.GetStarted:hover{
+    opacity: 0.7;
+}    
+  
