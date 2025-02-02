@@ -7,7 +7,13 @@
 
 <title>youtube.com clone</title>
 <style>
-    
+    .continar{
+        display: inline-block;
+        width: 300px;
+        vertical-align: top;
+        margin-right: 20px;
+
+    }
     .thumbstyle{
         display: block ;
         width: 300px;
@@ -27,94 +33,56 @@
        
     }
     .text1{
-        width: 300px ;
-        font-size: 15px ;
+       
+        font-size: 12px ;
         margin-bottom:  2px;
+       
     }
     .text2{
-        display: inline-block;
+       
         font-size: 9px;
         margin-top: 0px ;
         color :rgb(104, 104, 105)
-       
     }
-    .text1{
-        display: block;
+    
+    .thumb_profile{
+        display:inline-block;
+        width: 40px;
+        margin-right: 20px;
     }
-    .text2{
-        display: block;
-    }
-    .text3{
-        display: inline-block;
-        width: 250px;
-        text-align:justify;
-    }
-    .google_search{
-        width: 500px;
-        height: 30px;
-        border-radius: 20px;
-        display: block;
-        margin-bottom: 10px;
-        border-color: rgb(136, 136, 132);
-        box-shadow: 2px;
-        
-
-    }
-    .containar{
-        margin-left: 150px ;
-        font-family: "Viga", serif;
-        font-weight: 400;
-        font-style: normal;
-        margin-top: 100px;
-        margin-bottom: 20px;
-    }
-    .G{
-        
-        color: rgb(71, 108, 230);
-    }
-    .o{
-        
-        color: rgb(196, 19, 19);
-    }
-    .o2{
-       
-        color: rgb(237, 250, 53);
-    }
-    .g{
-        
-        color: rgb(71, 108, 230);
-    }
-    .l{
-       
-        color: rgb(23, 136, 61);
-    }
-    .e{
-        
-        color: rgb(196, 19, 19);
-    }
-    .bool_button {
-        display: inline-block;
-    }
-    .button_search{
-        display :block;
-        margin-left: 150px;
-        margin-bottom: 150px;
-    }
+    .text-container {
+            display: flex; /* Use flexbox to align items in a row */
+            align-items: center; /* Center items vertically */
+            margin-top: 5px; /* Space above the text container */
+        }
     </style>
  </head>
  <body>
- <input class ="search_label" type="text" placeholder="Search">
- <img class="thumbstyle" src="thumb\hq720.avif" ;>
- <p class="text1" >Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
- <p class="text2">programming With Ganesh</p>
- 
- <h1 class="containar"> <span class="G">G</span><span class="o">o</span><span class="o2">o</span><span class="g">g</span><span class="l">l</span><span class="e">e</span> </h1>
- <input class="google_search" placeholder="  Search Google or type a URL">
- <button class="button_search"> Google Search</button>
- 
- <p class="text3">Thanks for chatting with our customer support .would you like to take our quick survery ?</p>
- <button class="boolbool_button"> Yes</button>
- <button class="bool_button">No</button>
+    <input class ="search_label" type="text" placeholder="Search">
+    <div class="continar">
+        <div> 
+            <img class="thumbstyle" src="thumb/hq720.avif">
+        </div>
+        <div class="text-container">
+            <img class="thumb_profile" src="thumb/unnamed.jpg">
+            <div>
+                <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                <p class="text2">programming With Ganesh</p>
+            </div>
+        </div>
+    </div>  
+    <div class="continar">
+        <div> 
+            <img class="thumbstyle" src="thumb/hq720.avif">
+        </div>
+        <div class="text-container">
+            <img class="thumb_profile" src="thumb/unnamed.jpg">
+            <div>
+                <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                <p class="text2">programming With Ganesh</p>
+            </div>
+        </div>
+    </div>    
  
 </body>
-</html>
+</html> 
