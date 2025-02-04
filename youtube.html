@@ -7,16 +7,22 @@
 
 <title>youtube.com clone</title>
 <style>
+    .grid_continar{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr  ;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
     .continar{
         display: inline-block;
-        width: 300px;
+        width: 1frpx;
         vertical-align: top;
         margin-right: 20px;
 
     }
     .thumbstyle{
         display: block ;
-        width: 300px;
+        width: 100%;
         object-fit: contain;
         margin-top: 10PX;
         margin-left: 0px;
@@ -36,7 +42,7 @@
        
         font-size: 12px ;
         margin-bottom:  2px;
-       
+       margin-top: 0px; 
     }
     .text2{
        
@@ -51,38 +57,90 @@
         margin-right: 20px;
     }
     .text-container {
-            display: flex; /* Use flexbox to align items in a row */
-            align-items: center; /* Center items vertically */
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: 60px  1fr;
             margin-top: 5px; /* Space above the text container */
         }
     </style>
  </head>
  <body>
     <input class ="search_label" type="text" placeholder="Search">
-    <div class="continar">
-        <div> 
-            <img class="thumbstyle" src="thumb/hq720.avif">
-        </div>
-        <div class="text-container">
-            <img class="thumb_profile" src="thumb/unnamed.jpg">
-            <div>
-                <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
-                <p class="text2">programming With Ganesh</p>
+    <div class ="grid_continar">
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
             </div>
-        </div>
-    </div>  
-    <div class="continar">
-        <div> 
-            <img class="thumbstyle" src="thumb/hq720.avif">
-        </div>
-        <div class="text-container">
-            <img class="thumb_profile" src="thumb/unnamed.jpg">
-            <div>
-                <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
-                <p class="text2">programming With Ganesh</p>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
             </div>
-        </div>
-    </div>    
+        </div>  
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
+            </div>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
+            </div>
+        </div> 
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
+            </div>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
+            </div>
+        </div>    
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
+            </div>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
+            </div>
+        </div>  
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
+            </div>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
+            </div>
+        </div> 
+        <div class="continar">
+            <div> 
+                <img class="thumbstyle" src="thumb/hq720.avif">
+            </div>
+            <div class="text-container">
+                <img class="thumb_profile" src="thumb/unnamed.jpg">
+                <div>
+                    <p class="text1">Web Development Tutorial for Beginners | HTML CSS JavaScript | Home Page Design Bike Serv Website</p>
+                    <p class="text2">programming With Ganesh</p>
+                </div>
+            </div>
+        </div>    
+    </div>
+  
  
 </body>
 </html> 
