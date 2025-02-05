@@ -1,0 +1,70 @@
+.header_container{
+    display:flex;
+    flex-direction: row;
+    flex :1;
+    width: 600px;
+   justify-content: space-between;
+   align-items: center;
+   height: 30px;
+   border-color: rgb(43, 42, 42);  
+   border-width: 0.5px;
+   border-style: solid;
+   background-color: rgb(124, 121, 121) ;
+   margin-top: 0px ;
+   margin-right: 0px ;
+   margin-left:  0px;
+    }
+    .logo_container{
+        display :flex;
+        width:50px;
+        margin-right: 20px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        flex:30px;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        flex :40px; 
+        
+    }
+    .p_logo{ 
+        display: flex;
+        font-size: 10px;
+         flex:1;
+         margin-left: 5px;
+
+    }
+    .middle_container{
+        display: flex;
+        flex-direction: row;
+        justify-items: space-between;
+        align-items: center;
+        margin-left: 30px; 
+        flex:1;
+
+    }
+    .labal_search{
+        height: 20px ;
+        border-radius: 10px;
+        flex:1;
+        background-color: rgb(180, 178, 178);
+        border-color:rgb(75, 74, 74) ;
+        margin-left: 5px;
+    }
+    .labal_search:active{
+        border-color:rgb(75, 74, 74) ;
+    }
+    .button_search{
+        border-radius: 10px;
+        border-width: 2px;
+        background-color:  rgb(129, 129, 129);;
+    }
+    .button_search:hover{
+        background-color:  rgb(97, 96, 96);;
+    }
+    .button_search:active{
+        background-color:  rgb(43, 42, 42);;
+    }

@@ -4,9 +4,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="..\style\header_first_project.css" >   
 
 <title>youtube.com clone</title>
 <style>
+    body{
+        background-color:  rgb(124, 121, 121) ;
+    }
     .grid_continar{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr  ;
@@ -65,8 +69,18 @@
     </style>
  </head>
  <body>
-    <input class ="search_label" type="text" placeholder="Search">
-    <div class ="grid_continar">
+    <div>
+        <div class="header_container">
+        <div class="logo_container" >
+        <img class="logo" src="thumb\Capture.PNG"  >  
+        <p class="p_logo"> alaaatef</p>
+        </div>
+        <div class="middle_container" >
+             <input class="labal_search" type="text" placeholder="Search">
+            <button class="button_search">🔍</button>
+            </div>    
+       </div>     
+     <div class ="grid_continar">
         <div class="continar">
             <div> 
                 <img class="thumbstyle" src="thumb/hq720.avif">
