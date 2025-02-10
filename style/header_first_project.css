@@ -3,6 +3,11 @@
     flex-direction: row;
     flex :1;
     width: 600px;
+    position: fixed;
+        left:0;
+        top:0;
+        right: 0;
+        height: 55px;
    justify-content: space-between;
    align-items: center;
    height: 30px;
