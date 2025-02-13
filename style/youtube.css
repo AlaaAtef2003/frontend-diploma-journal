@@ -1,8 +1,10 @@
-<!DOCTYPE html>
-<head>
-    <title>headers</title>
-<style>
-    .head_container{
+
+    .body_container{
+        padding-top: 50px;
+        padding-left: 70px;
+        background-color: rgb(249, 253, 253);
+    }
+     .head_container{
         display: flex;
         flex-direction: row;
         position: fixed;
@@ -131,6 +133,7 @@
         border-width: 1px;
         border-right-color: rgb(209, 209, 209);
     }
+
     .top_header{
         width:70px;
         display: flex;
@@ -155,58 +158,59 @@
         margin-left: 0%;
         margin-top: 0;
         font-size: 9px;
+    }
+    .grid_continar{
+        display: grid;
+        grid-template-columns: 1fr 1fr   ;
+        row-gap: 20px;
+        column-gap: 20px;
+    }
+    .continar{
+        display: inline-block;
+        width: 1frpx;
+        vertical-align: top;
+        margin-right: 20px;
+
+    }
+    .thumbstyle{
+        display: block ;
+        width: 100%;
+        object-fit: contain;
+        margin-top: 10PX;
+        margin-left: 0px;
+        margin-bottom: 0;
+        border-style: 20px;
+        border-style: solid;
+        background-color: blueviolet;
+        border-color: rgb(242, 242, 243);
+        border-radius: 5px;;
+    }
+    .search_label{
+        font-size: 20px;
+        display: block;
        
     }
-</style>
-
-
-</head>
-
-
-<body>
-    <div class="head_container">
-        <div class="first_section">
-         <img class="first"src="thumb\hamburger-menu.svg">
-         <img   class="first-logo"src="thumb\youtube-logo.svg">
-        </div>
-        <div class="middle_section">
-            <input class="middle_labal" type="text" placeholder="Search">
-            <img class="middle_icon"src="thumb\search.svg">
-            <img class="middle_voice" src="thumb\voice-search-icon.svg">
-        </div>
-        <div class="last_section">
-            <img class="last_upload"src="thumb\upload.svg">
-            <img class="last_app" src="thumb\youtube-apps.svg">
-            <img class="last_notification" src="thumb/notifications.svg" alt="Notifications">
-            <img class="last_profile" src="thumb/Capture.PNG" alt="Profile">
-        </div>
-    </div>
-   <div class="vertical-header">
-   <div class="top_header">
-    <img class="t_home" src="thumb/home.svg" alt="Home">
-    <p class="t_p">Home</p>
-    </div>
-   <div class="top_header">
-    <img class="t_home" src="thumb/explore.svg" alt="Home">
-    <p class="t_p">Explore</p>
-   </div>
-   <div class="top_header">
-    <img class="t_home" src="thumb/subscriptions.svg" alt="Home">
-    <p class="t_p">subscriptions</p>
-   </div>
-   <div class="top_header">
-    <img class="t_home" src="thumb/originals.svg" alt="Home">
-    <p class="t_p">originals</p>
-   </div>
-   <div class="top_header">
-    <img class="t_home" src="thumb/youtube-music.svg" alt="Home">
-    <p class="t_p">youtube Music</p>
-   </div>
-   <div class="top_header">
-    <img class="t_home" src="thumb/library.svg" alt="Home">
-    <p class="t_p">library</p>
-   </div>
-   </div>
-</body>
-
-</html>
+    .text1{
+       
+        font-size: 12px ;
+        margin-bottom:  2px;
+       margin-top: 0px; 
+    }
+    .text2{
+       
+        font-size: 9px;
+        margin-top: 0px ;
+        color :rgb(104, 104, 105)
+    }
+    
+    .thumb_profile{
+        display:inline-block;
+        width: 40px;
+        margin-right: 20px;
+    }
+    .text-container {
+        display: grid;
+        margin-top: 30px;
+        grid-template-columns: 60px  1fr;
+            margin-top: 5px; /* Space above the text container */
+        }
