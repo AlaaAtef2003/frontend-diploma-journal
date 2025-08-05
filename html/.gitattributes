@@ -1,0 +1,4 @@
+# Specify languages for detection
+*.py linguist-language=Python
+*.java linguist-language=Java
+*.html linguist-language=HTML

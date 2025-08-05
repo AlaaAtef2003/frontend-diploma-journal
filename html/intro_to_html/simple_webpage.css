@@ -1,0 +1,140 @@
+h1 {
+    
+    font-family: "Viga", serif;
+    font-weight: 900;
+    font-style: normal;
+    color: #504f4f;
+    font-style: italic;
+    margin-left: 90px;
+    margin-bottom: 10px;
+}
+.container {
+    margin-top: 50px;  
+}
+.p1 {
+    width: 400px;
+    line-height: normal;
+    color: #251e1e;
+    margin-top: 10px;
+    margin-left: 80px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   text-align: center;
+}
+.click {
+    color: #ffffff;
+    background-color: rgb(80, 109, 139);
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-left: 100px;
+    border-radius: 200px;
+    box-shadow: 5px 5px 5px #606d7a;
+}
+.click:hover {
+    opacity: 0.7;
+}
+.click:active {
+    opacity: 0.4;
+}
+.link {
+    margin-top: 10px;         
+    margin-left: 100px;
+}
+
+.web-example {
+    color: rgb(7, 5, 3);
+    cursor: pointer;
+}
+
+.web-example:hover {
+    text-decoration: underline;
+}
+.h2{
+    font-family: Verdana;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-bottom: 9px;
+}
+.p2{
+    margin-top: 9px;
+    margin-left: 100px;
+    color: #504f4f;
+}
+.p3{
+    margin-top: 9px;
+    margin-left: 100px;
+    color: black;
+    
+}
+.GetStarted{
+    background-color: rgb(50, 146, 25);
+    padding: 10px 10px;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-left: 100px ;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px rgb(151, 151, 151);    
+    }
+.GetStarted:hover{
+    opacity: 0.7;
+}    
+.text3{
+    display: inline-block;
+    width: 250px;
+    text-align:justify;
+}
+.google_search{
+    width: 500px;
+    height: 30px;
+    border-radius: 20px;
+    display: block;
+    margin-bottom: 10px;
+    border-color: rgb(136, 136, 132);
+    box-shadow: 2px;
+    
+
+}
+.containar1{
+    margin-left: 150px ;
+    font-family: "Viga", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+.G{
+    
+    color: rgb(71, 108, 230);
+}
+.o{
+    
+    color: rgb(196, 19, 19);
+}
+.o2{
+   
+    color: rgb(237, 250, 53);
+}
+.g{
+    
+    color: rgb(71, 108, 230);
+}
+.l{
+   
+    color: rgb(23, 136, 61);
+}
+.e{
+    
+    color: rgb(196, 19, 19);
+}
+.bool_button {
+    display: inline-block;
+}
+.button_search{
+    display :block;
+    margin-left: 150px;
+    margin-bottom: 150px;
+}
