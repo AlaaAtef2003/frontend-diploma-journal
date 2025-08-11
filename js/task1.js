@@ -1,258 +1,315 @@
+// =======================
+//  JavaScript Operators
+// =======================
 
-//js
-// opertators
-// 1. Arithmetic Operators
+// 1. Arithmetic Operators (+, -, *, /, %, **)
 /*
 let a = 10; 
 let b = 5;
 let sum = a + b; // Addition
 console.log(typeof sum); // "number"
-console.log( Number("10") + 5); // Implicit conversion from string to number
-console.log(typeof NaN); 
-var result = prompt("Enter a number: "); // Prompting user for input
-var result2 = prompt("Enter a number: "); // Prompting user for input
+console.log(Number("10") + 5); // String converted to number → 15
+console.log(typeof NaN); // "number"
 
-
-console.log(Number( result)+Number( result2)); // "string" since prompt returns a string
+var result = prompt("Enter a number: "); 
+var result2 = prompt("Enter another number: "); 
+console.log(Number(result) + Number(result2)); // Convert strings to numbers before adding
 */
-// 2. comparison Operators
-// > < == ===
- // 3. Logical Operators    
-// && || !
-/*
-var mark = prompt("Enter your degree: "); // Prompting user for input
 
+// 2. Comparison Operators (> < >= <= == === != !==)
+// == compares values only, === compares values AND types
+
+// 3. Logical Operators (&& → AND, || → OR, ! → NOT)
+/*
+var mark = prompt("Enter your degree: ");
 if (mark >= 50) {
-    console.log("You are passed");
-}   else {      
-    console.log("You are failed");
+    console.log("You passed");
+} else {      
+    console.log("You failed");
 }
-    */
-   // 4. Assignment Operators =
-   // == check equality(value), === checks value and type     
- /*  var name = prompt("Enter your name: "); // Prompting user for input
-if (name =="John") {  
+*/
+
+// 4. Assignment Operator (=)
+/*
+var name = prompt("Enter your name: ");
+if (name == "John") {  
     console.log("Hello John");
-}
-else
-{
+} else {
     console.log("Hello stranger");
-} 
-var x ="1";
-if( x ===1 ){
+}
+
+var x = "1";
+if (x === 1) { // false because type is different
     console.log("x is equal to 1");
 }
+*/
+
+// =======================
+//  Loops Example
+// =======================
+/*
 var box = "";
 for (let i = 0; i < 5; i++) {
-  box += "<h1>welcome</h1>"; // Concatenating string
+    box += "<h1>Welcome</h1>";
 }
 document.getElementById("demo").innerHTML = box;
+*/
 
+// =======================
+//  Functions
+// =======================
 
-//functions 
-//////statement function
+// Statement function → can be called before definition (hoisting)
+/*
 function getsum(a, b) {
-    document.getElementById("demo").innerHTML = `The sum of ${a} and ${b} is: ${a+b}`; // Displaying the result in HTML
-    
-    console.log(a+b); // Function to return the sum of two numbers
+    document.getElementById("demo").innerHTML = `The sum of ${a} and ${b} is: ${a+b}`;
+    console.log(a + b);
 }
-getsum(10, 20); // Calling the function with arguments
- // Output the result of the function call
- */
+getsum(10, 20);
+*/
 
-//hoisting
-//console.log(x); // Output: donot found\
-/* 
-console.log(x);// Output: undefined
-var x=5; // Variable declaration and initialization
- */
-
-////////exprqssion function تقدر تعمل call before write this function due to hosting 
-/*var getSum = function(a, b) {
-    return a + b; // Function expression to return the sum of two numbers
+// Function expression → cannot be called before definition
+/*
+var getSum = function(a, b) {
+    return a + b;
 };
-var result = getSum(10, 20); // Calling the function expression with arguments*/
-///////anoymous functionيعنى مالهاش اسم 
-//self invoke بت call نفسها 
+console.log(getSum(10, 20));
+*/
+
+// Anonymous function → has no name
+// Self-invoking function → runs immediately
 /*
 (function(){
-    console.log("hello");
+    console.log("Hello");
 })();
 */
 
-//object 
+// =======================
+//  Objects
+// =======================
 /*
 var person = {
     name: "John",   
     age: 30,
-    gender:"male", // Property to store the person's
-    greet: function() { // Method to greet the person
+    gender: "male",
+    greet: function() {
         console.log("Hello, my name is " + this.name);
-    }   }
-
-    console.log(person.name); // Accessing the name property of the person object
-     person['age'] = 35; // Updating the age property of the person object
-     console.log(person.age); // Accessing the updated age property
-    //array same type
-     var names =["alaa","esraa", "aya"];
-     console.log(names[1]);
-     //list different type
-     var cars =["kia","volvo",false ,50]
-          
-     
-    var names =["alaa","esraa", "aya"];
-    var numbers = [11, 2, 13, 40, 5]; // Array of numbers
-    numbers.sort(function(a, b) { return a - b;});
-    console.log(numbers); // Output: [2, 5, 11, 13, 40]
-    console.log(names.sort()); // Accessing the second element of the names array
-    names.push("sara"); // Adding a new name to the end of the names array
-    names.unshift("mona"); // Adding a new name to the beginning of the names array
-    console.log(names); // Output: ["mona", "alaa", "esraa", "aya", "sara"]
-    var name=names.pop(); // Removing the last name from the names array
-    console.log(name); // Output: "sara"
-    
-    console.log(names.slice(1,2)); // Output: ["mona", "esraa", "aya"]
-    names.splice(1, 2, "newName"); // Replacing two names starting from index 1 with "newName"
-    console.log(names.toString()); // Output: "mona,newName,aya"
-    console.log(names.join("/")); // Output: "mona/newName/aya"
-    console.log(names.indexOf("esraa")); // Output: -1 (not found) FOR SEARCHING
-    names.reverse(); // Reversing the order of names in the array
-    console.log(names); // Output: ["aya", "newName", "mona"]
-    names.concat(["sara", "john"]); // Concatenating two arrays
-    console.log(names); // Output: ["aya", "newName", "mona", "sara", "john"]
-    */
-    var productName = document.getElementById("productName"); 
-    var productPrice = document.getElementById("productPrice"); 
-    var productCategory = document.getElementById("productCategory"); 
-    var productDescription = document.getElementById("productDescription");
-    var productTableBody = document.getElementById("productTableBody"); // Get the table body element to display products
-    var addBtn = document.getElementById("addProduct"); // Get the button to add products
-    var productlist;
-    var global;
-    var indexglobal;
-    if (localStorage.getItem("data")==null){
-        productlist=[];
     }
-    else{
-        productlist = JSON.parse(localStorage.getItem("data"));
-        display(productlist)
-    }
+};
 
-    addBtn.onclick = function(event) {
+console.log(person.name);
+person.age = 35; // update property
+console.log(person.age);
+*/
+
+// =======================
+//  Arrays
+// =======================
+/*
+var names = ["alaa", "esraa", "aya"];
+var numbers = [11, 2, 13, 40, 5];
+
+// Sorting
+numbers.sort(function(a, b) { return a - b; });
+console.log(numbers); // [2, 5, 11, 13, 40]
+console.log(names.sort()); 
+
+// Adding
+names.push("sara");       // end
+names.unshift("mona");    // start
+
+// Removing
+var last = names.pop();   // remove last
+console.log(last);        // "sara"
+
+// Slicing and splicing
+console.log(names.slice(1, 2)); 
+names.splice(1, 2, "newName");
+
+// Converting
+console.log(names.toString()); 
+console.log(names.join("/")); 
+
+// Searching
+console.log(names.indexOf("esraa")); // -1 if not found
+
+// Reversing
+names.reverse();
+console.log(names);
+
+// Concatenating
+console.log(names.concat(["sara", "john"]));
+*/
+
+// =======================
+//  Regular Expressions
+// =======================
+// /pattern/flags
+/*
+var x = "regular";
+console.log(x.replace("r", "k"));    // kegular (first occurrence)
+console.log(x.replace(/r/, "k"));    // kegular (regex first occurrence)
+console.log(x.replace(/r/g, "k"));   // kegulak (all occurrences)
+
+var regex = /^[A-Z][a-z]{1,}$/; // starts with 1 uppercase + lowercase letters
+console.log(regex.test("John")); // true
+*/
+// =======================
+// Product Management App
+// =======================
+
+var productName = document.getElementById("productName"); 
+var productPrice = document.getElementById("productPrice"); 
+var productCategory = document.getElementById("productCategory"); 
+var productDescription = document.getElementById("productDescription");
+var productTableBody = document.getElementById("productTableBody"); 
+var addBtn = document.getElementById("addProduct");
+var formTitle = document.getElementById("formTitle");
+
+var productlist = JSON.parse(localStorage.getItem("data")) || [];
+var indexglobal = null;
+
+// Display products on page load
+display(productlist);
+
+// Add / Update product
+addBtn.onclick = function (event) {
+    event.preventDefault();
     if (addBtn.innerHTML === "Update Product") {
-         event.preventDefault(); 
-        edit();     
-        }   
-        else {
-       addproduct();
-        }} 
-    function addproduct (){
+        edit();
+    } else {
+        addproduct();
+    }
+};
 
-        
-        var product = {
-            name: productName.value,
-            price: (productPrice.value),
-            Category: (productCategory.value),
-            description: productDescription.value
-        };
-         
-        productlist.push(product);
-        localStorage.setItem("data", JSON.stringify(productlist));
+// Add new product
+function addproduct() {
+    if (!validateInputs()) return;
+
+    var product = {
+        name: productName.value.trim(),
+        price: productPrice.value.trim(),
+        category: productCategory.value.trim(),
+        description: productDescription.value.trim()
+    };
+
+    productlist.push(product);
+    saveData();
+    display(productlist);
+    clearInputs();
+}
+
+// Display products
+function display(list) {
+    var box = "";
+    for (var i = 0; i < list.length; i++) {
+        box += `<tr>
+            <td>${i + 1}</td>
+            <td class="proName">${list[i].name}</td>
+            <td>$${list[i].price}</td>
+            <td>${list[i].category}</td>
+            <td>${list[i].description}</td>
+            <td><button onclick="delfun(${i})" class="btn btn-danger btn-sm">Delete</button></td>
+            <td><button onclick="delupdata(${i})" class="btn btn-warning btn-sm">Update</button></td>
+        </tr>`;
+    }
+    productTableBody.innerHTML = box;
+}
+
+// Delete product
+function delfun(index) {
+    if (confirm("Are you sure you want to delete this product?")) {
+        productlist.splice(index, 1);
+        saveData();
         display(productlist);
-         clearInputs();
     }
-    function display( productlist){
-        var box ="" ;
-        for(var i=0; i<productlist.length; i++){
-            box +=` <tr> <td>${i + 1}</td>
-                <td class ="proName">${productlist[i].name}</td>
-                <td>$${productlist[i].price}</td>  
-                <td ">${productlist[i].category}</td>
-                <td>${productlist[i].description}</td>   
-                <td><button onclick="delfun(${i})" class="btn btn-danger">Delete</button></td>
-                <td><button onclick="delupdata(${i})" class="btn btn-primary">Update</button></td>
-                </tr>`
+}
 
-        }
-        
-        productTableBody.innerHTML =box ;
-        var selectes = document.querySelectorAll(".proName");
-        global = selectes;
-        
-    }
-    function delfun(index){
-        productlist.splice(index,1); 
-        localStorage.setItem("data", JSON.stringify(productlist));
-        display(productlist);
-    }
-    function clearInputs() {
-        productName.value = "";
-        productPrice.value = "";
-        productCategory.value = "";
-        productDescription.value = "";
-    }
-    function delupdata(index) {
-        indexglobal = index; 
-        productName.value = productlist[index].name;
-        productPrice.value = productlist[index].price;
-        productCategory.value = productlist[index].category;
-        productDescription.value = productlist[index].description;
-        document.getElementById("addProduct").innerHTML = "Update Product"; 
-     }
-    function edit (){
-        productlist[indexglobal].name = productName.value;
-        productlist[indexglobal].price = productPrice.value;
-        productlist[indexglobal].category = productCategory.value;  
-        productlist[indexglobal].description = productDescription.value;
-        localStorage.setItem("data", JSON.stringify(productlist));
-        document.getElementById("addProduct").innerHTML = "add Product"; 
-        display(productlist);
-       
-    }
-    var term;
-    function search (e) {
-        var newarray = [];
-       term = e.value.toLowerCase(); 
-       for (var i = 0; i < productlist.length; i++) {
-           if (productlist[i].name.toLowerCase().includes(term) 
-   ) {
-            newarray.push(productlist[i]);
-    
-           }}
-           display(newarray); 
-           
-        for (var i = 0; i < global.length; i++) {
-            if (term.length){
-            global[i].innerHTML= global[i].textContent.replace(term, `<mark>${term}</mark>`);
+// Prepare product for editing
+function delupdata(index) {
+    indexglobal = index;
+    productName.value = productlist[index].name;
+    productPrice.value = productlist[index].price;
+    productCategory.value = productlist[index].category;
+    productDescription.value = productlist[index].description;
+    addBtn.innerHTML = "Update Product";
+    formTitle.innerHTML = "Edit Product";
+}
 
-        }
+// Update product
+function edit() {
+    if (!validateInputs()) return;
 
+    productlist[indexglobal] = {
+        name: productName.value.trim(),
+        price: productPrice.value.trim(),
+        category: productCategory.value.trim(),
+        description: productDescription.value.trim()
+    };
 
-           // isplay the filtered products
-       //include bool true if found
-       //search  index or -1
-       //indexOf
-       //match return array of matches or null if not found
+    saveData();
+    addBtn.innerHTML = "Add Product";
+    formTitle.innerHTML = "Add Product";
+    display(productlist);
+    clearInputs();
+}
 
-        }}
-     /*   document.querySelector("a").addEventListener("click", function(event) {
-    event.preventDefault(); // Prevent the default action of the link
-    // Display an alert when the link is clicked
-        })*/
-     
-    //regular expression
-    // رمز او نمط pattern
-    /[a-z]{3,5}/; // Matches any string with 3 to 5 lowercase letters
-    var x = "regular";
-    console.log(x.replace("r","k")); //kegular
-    console.log(x.replace(/r/,"k")); //kegular
-    console.log(x.replace(/r/g,"k")); //kegulak
-    function nameRegex(){
-        var regex =/^[A-Z]{1}[a-z]$/;
-        if (regex.test(productName.value)){
-            return true;
-        }else{
-            alert("invaild name");
-            return false;
-        }
+// Search products with highlight
+function search(e) {
+    var term = e.value.toLowerCase();
+    var filtered = productlist.filter(item =>
+        item.name.toLowerCase().includes(term)
+    );
+
+    display(filtered);
+
+    if (term.length > 0) {
+        document.querySelectorAll(".proName").forEach(function (el) {
+            var content = el.textContent;
+            var regex = new RegExp(`(${term})`, "gi");
+            el.innerHTML = content.replace(regex, `<span class="highlight">$1</span>`);
+        });
     }
+}
+
+// Validate inputs
+function validateInputs() {
+    if (!nameRegex()) return false;
+    if (!productPrice.value || productPrice.value <= 0) {
+        alert("Please enter a valid price");
+        return false;
+    }
+    if (!productCategory.value.trim()) {
+        alert("Please enter a category");
+        return false;
+    }
+    if (!productDescription.value.trim()) {
+        alert("Please enter a description");
+        return false;
+    }
+    return true;
+}
+
+// Name validation
+function nameRegex() {
+    var regex = /^[A-Z][a-z]*(\s[A-Z][a-z]*)*$/; // Allows multi-word names
+    if (regex.test(productName.value.trim())) {
+        return true;
+    } else {
+        alert("Invalid name: must start with uppercase followed by lowercase letters");
+        return false;
+    }
+}
+
+// Clear form inputs
+function clearInputs() {
+    productName.value = "";
+    productPrice.value = "";
+    productCategory.value = "";
+    productDescription.value = "";
+}
+
+// Save to localStorage
+function saveData() {
+    localStorage.setItem("data", JSON.stringify(productlist));
+}
