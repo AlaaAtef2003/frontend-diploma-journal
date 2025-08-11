@@ -1,49 +1,18 @@
-//AJAX
-//technique to create dynamic web pages
-//==>   asynchronous JavaScript and XML
-//send a request to the server\
-//SERVER response data is in JSON format
-//updata data on web page
-//xmlHttpRequest object
-//fetch API
-
-//method
- /* get ==> read data from the server
-    post ==> send data to the server
-    put ==> update data on the server
-    delete ==> delete data on the server*/
-//readystatechange event
-/* 0 no request has been sent
-   1 establishing connection with the server
-   2 request has been received by the server
-   3 processing the request
-   4 server response*/
-   //server must reply for the request to be successful or else it will fail
-   /*
-   200 = “success” (data retrieved without error).
-
-Other examples: 
-
-404 → Not Found
-
-500 → Server Error
-
-403 → Forbidden
-*/
 (function () {
-var meals =( document.querySelectorAll(".nav-link"))
- console.log(meals);
- for (var i = 0; i < meals.length; i++) {
-    meals[i].addEventListener("click",function(e){
-            var test=(e.target.innerHTML);
+    var meals = document.querySelectorAll(".nav-link");
+    console.log(meals);
+    for (var i = 0; i < meals.length; i++) {
+        meals[i].addEventListener("click", function (e) {
+            var test = e.target.innerHTML.trim();
             getPosts(test);
-    })
- }
-    })();
-var dish = [];
-getPosts("pizza"); // Default meal to display
+        });
+    }
+})();
 
-// GET posts
+var dish = [];
+getPosts("pizza"); // عرض وصفات البيتزا أولاً
+
+// جلب وصفات
 function getPosts(meal) {
     var xml = new XMLHttpRequest();
     xml.open("GET", `https://forkify-api.herokuapp.com/api/search?q=${meal}`, true);
@@ -51,26 +20,61 @@ function getPosts(meal) {
 
     xml.addEventListener("readystatechange", function () {
         if (xml.readyState == 4 && xml.status == 200) {
-            dish = JSON.parse(xml.responseText); 
-            dish = dish.recipes; 
+            dish = JSON.parse(xml.responseText);
+            dish = dish.recipes;
             display();
-            
         }
     });
 }
 
-// Display posts
+// عرض الوصفات ككروت
 function display() {
     var box = "";
     for (var i = 0; i < dish.length; i++) {
         box += `
-            <div class="col-md-3">
-                <img src="${dish[i].image_url}" class="img-fluid" alt="${dish[i].title}">
-                <h3>${dish[i].title}</h3>
-                <p>${dish[i].publisher}</p>
-                
+        <div class="card py-2 px-2" style="width: 18rem; margin: 10px;">
+            <img src="${dish[i].image_url}" class="card-img-top img-fluid" alt="${dish[i].title}">
+            <div class="card-body">
+                <h5 class="card-title">${dish[i].title}</h5>
+                <p class="card-text">${dish[i].publisher}</p>
+                <p class="card-text">ID: ${dish[i].recipe_id}</p>
+                <a href="#" class="btn btn-primary" onclick="getRecipe('${dish[i].recipe_id}')">View Recipe</a>
             </div>
+        </div>
         `;
     }
     document.getElementById("row").innerHTML = box;
+}
+
+// جلب تفاصيل وصفة معينة
+function getRecipe(id) {
+    var xml = new XMLHttpRequest();
+    xml.open("GET", `https://forkify-api.herokuapp.com/api/get?rId=${id}`, true);
+    xml.send();
+
+    xml.addEventListener("readystatechange", function () {
+        if (xml.readyState == 4 && xml.status == 200) {
+            let data = JSON.parse(xml.responseText);
+            let recipe = data.recipe;
+            displayRecipe(recipe);
+
+            // فتح المودال بعد تحميل التفاصيل
+            let modal = new bootstrap.Modal(document.getElementById("exampleModal"));
+            modal.show();
+        }
+    });
+}
+
+// عرض تفاصيل الوصفة في المودال
+function displayRecipe(recipe) {
+    var box = "";
+    box += `<img src="${recipe.image_url}" class="img-fluid mb-3" alt="${recipe.title}">`;
+    box += `<h5>${recipe.title}</h5>`;
+    box += "<ul>";
+    for (var i = 0; i < recipe.ingredients.length; i++) {
+        box += `<li>${recipe.ingredients[i]}</li>`;
+    }
+    box += "</ul>";
+
+    document.getElementById("recipeDetails").innerHTML = box;
 }
