@@ -1,0 +1,77 @@
+<!-- ngModel -> requires importing FormsModule
+     *ngFor, *ngIf, *ngSwitch, ng-template -> requires CommonModule -->
+
+<!-- Display the total order price using interpolation binding -->
+<h1>Total Order Price: {{ totalorderprice }}</h1>
+
+<!-- Display the selected category ID using interpolation binding -->
+<h2>Selected Category ID: {{ selectedCatId }}</h2>
+
+<div class="mb-3">
+  <label for="categorySelect" class="form-label">Select Category</label>
+
+  <!-- Two-way data binding with ngModel to bind the select value to selectedCatId -->
+  <select class="form-select form-select-lg" id="categorySelect" [(ngModel)]="selectedCatId">
+    <option [value]="0">All Categories</option>
+    <!-- Loop through 'categoris' array using *ngFor -->
+    <option *ngFor="let cat of categoris" [value]="cat.id">{{ cat.name }}</option>
+  </select>
+</div>
+
+<div class="container text-center">
+  <div class="row row-cols-md-4">
+    <!-- Use ng-container for better performance with *ngFor and conditional *ngIf inside -->
+     <!--<ng-container *ngFor="let prd of product; let i = index; trackBy: trackProduct">-->
+      @for ( prd of product; track prd.id ) {
+      <!-- Conditional rendering with *ngIf -->
+      <div class="col"
+           *ngIf="prd.quantity != 0"
+           [class.d-none]="prd.catId != selectedCatId && selectedCatId != 0">
+
+        <!-- Card with style binding based on quantity -->
+        <div class="card" style="width: 18rem;"
+             [style.backgroundColor]="prd.quantity == 0 ? 'lightgray' : 'white'">
+
+          <!-- Property binding for product image -->
+          <img [src]="prd.imgurl" class="card-img-top" alt="{{ prd.name }}">
+
+          <div class="card-body">
+            <!-- Product name -->
+            <h5 class="card-title">{{ prd.name }}</h5>
+
+            <!-- Product price -->
+            <p class="card-text">Price: {{ prd.price }}</p>
+
+            <!-- ngSwitch example to display different messages based on quantity -->
+
+            <!--<div [ngSwitch]="prd.quantity">
+              <p class="card-text" *ngSwitchCase="0">Out of stock</p>
+              <p class="card-text" *ngSwitchCase="1">Last item in stock!</p>
+              <p class="card-text" *ngSwitchDefault>Quantity: {{ prd.quantity }}</p>
+            </div> -->
+            @switch (prd.quantity) {
+              @case (0) {
+                <p class="card-text">Out of stock</p>
+              }
+              @case (1) {
+                <p class="card-text">Last item in stock!</p>
+              }
+              @default {
+                <p class="card-text">Quantity: {{ prd.quantity }}</p>
+              }
+            }
+
+            <!-- Input for user to enter quantity -->
+            <input type="number" #countinp />
+
+            <!-- Event binding: call 'buy' function on button click -->
+            <button class="btn btn-primary" (click)="buy(countinp.value, prd.price)">Buy</button>
+          </div>
+        </div>
+      </div>
+      }@empty {
+        <!--in case of no products available -->
+        <h2>No products available</h2>
+      }
+  </div>
+</div>
